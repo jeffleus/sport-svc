@@ -35,7 +35,7 @@ module.exports.get = (event, context, callback) => {
     })
   };
     //check the event path params for an employee id to use during lookup
-    var id = (event.pathParameters && event.pathParameters.aid) ? event.pathParameters.aid : null;
+    var id = (event.pathParameters && event.pathParameters.sid) ? event.pathParameters.sid : null;
     var filter = ((event.queryStringParameters != null) && (event.queryStringParameters.filter != null))?	
 		event.queryStringParameters.filter.split(','):null;
     console.log(moduleName, 'filter created - ' + JSON.stringify(filter));

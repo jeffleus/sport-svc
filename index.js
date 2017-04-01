@@ -13,11 +13,11 @@ var sport = {
 };
 
 var id = 1;
-var filter = ('XXX').split(',');
+var filter = ('mgo,wgo').split(',');
 console.log("FILTER: ", filter);
 
 //Sport.get(null, filter).then(function(student) {
-Sport.get('XXX').then(function(student) {
+Sport.get(null,filter).then(function(student) {
 //Sport.create(sport).then(function(student) {
 //Sport.update(sport).then(function(student) {
 //Sport.delete('XXX').then(function(result) {
