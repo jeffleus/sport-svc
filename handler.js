@@ -58,9 +58,9 @@ module.exports.create = (event, context, callback) => {
     Sport.create(json).then(function(s) {
         console.log(moduleName, 'sport created, sending sms alert to confirm');
         sport = s;	//stash the sport in a function scoped variable
-        var msg = moduleName + ': successfully created a new athlete - ' + sport.SportCodeID;
-        return SMS.sendText(msg, '+13108771151');
-    }).then(function(result) {
+//        var msg = moduleName + ': successfully created a new athlete - ' + sport.SportCodeID;
+//        return SMS.sendText(msg, '+13108771151');
+//    }).then(function(result) {
         response.body = JSON.stringify({
             message: 'Successfully created a new sport: ' + sport.SportCodeID,
             sport: sport
