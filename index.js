@@ -13,7 +13,7 @@ var sport = {
 };
 
 var id = 1;
-var filter = ('mgo,wgo').split(',');
+var filter = ('xsl,mgo,wgo').split(',');
 console.log("FILTER: ", filter);
 
 //Sport.get(null, filter).then(function(student) {
