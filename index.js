@@ -16,18 +16,13 @@ var id = 1;
 var filter = ('mgo,wgo').split(',');
 console.log("FILTER: ", filter);
 
-//Sport.get(null, filter).then(function(student) {
-Sport.get(null,filter).then(function(student) {
-//Sport.create(sport).then(function(student) {
-//Sport.update(sport).then(function(student) {
+//Sport.get(null, filter).then(function(result) {
+Sport.get(null,filter).then(function(result) {
+//Sport.create(sport).then(function(result) {
+//Sport.update(sport).then(function(result) {
 //Sport.delete('XXX').then(function(result) {
 	
-//Athletes.delete(1165).then(function(result) {
-//Athletes.update(ath).then(function(student) {
-//Athletes.create(ath).then(function(student) {
-//Athletes.get(id, filter).then(function(student) {
-//	console.log(result);
-	console.log(student);
+	console.log(result);
 	return;
 }).catch(function(err) {
 	console.error(err);
