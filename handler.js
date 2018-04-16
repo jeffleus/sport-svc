@@ -1,11 +1,10 @@
 'use strict';
 var Sport = require('./Sport');
-var SMS = require('./SMS');
 const AWS = require('aws-sdk');
 AWS.config.region = 'us-west-2';
 var sns = new AWS.SNS();
 
-var moduleName = 'sport-svc';
+var moduleName = 'gvsu-sport-svc';
 
 module.exports.get = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
@@ -56,11 +55,7 @@ module.exports.create = (event, context, callback) => {
     var sport;
     
     Sport.create(json).then(function(s) {
-        console.log(moduleName, 'sport created, sending sms alert to confirm');
         sport = s;	//stash the sport in a function scoped variable
-//        var msg = moduleName + ': successfully created a new athlete - ' + sport.SportCodeID;
-//        return SMS.sendText(msg, '+13108771151');
-//    }).then(function(result) {
         response.body = JSON.stringify({
             message: 'Successfully created a new sport: ' + sport.SportCodeID,
             sport: sport
