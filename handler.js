@@ -1,9 +1,7 @@
 'use strict';
 var Sport = require('./Sport');
-var SMS = require('./SMS');
 const AWS = require('aws-sdk');
 AWS.config.region = 'us-west-2';
-var sns = new AWS.SNS();
 
 var moduleName = 'sport-svc';
 
